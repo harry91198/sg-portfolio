@@ -132,11 +132,12 @@ export default function ServicesSection() {
               Ready to bring your <span className="gradient-text">vision</span> to life?
             </h3>
             <p className="text-white/60 mb-8 text-base max-w-xl mx-auto leading-relaxed">
-              Let's collaborate on your next creative project. From initial concept 
-              to final delivery, I'll ensure your story is told with impact.
+              Let&apos;s collaborate on your next creative project. From initial concept 
+              to final delivery, I&apos;ll ensure your story is told with impact.
             </p>
             <motion.button
               onClick={scrollToContact}
+              style={{padding: '0.75rem'}}
               className="bg-white text-black px-8 py-3 rounded-full font-medium text-sm
                          hover:bg-white/90 transition-all duration-300"
               whileHover={{ scale: 1.05 }}

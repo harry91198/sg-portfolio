@@ -2,7 +2,7 @@
 
 import { motion, useInView } from 'framer-motion'
 import { useRef, useState } from 'react'
-import { Play, ArrowRight, ExternalLink } from 'lucide-react'
+import { ArrowRight, ExternalLink } from 'lucide-react'
 import Image from 'next/image'
 
 const categories = ['All', 'Music Videos', 'Ads', 'Digital Campaigns']
@@ -239,6 +239,7 @@ export default function WorkSection() {
           className="text-center mt-24"
         >
           <motion.button
+            style={{padding: '0.75rem'}}
             className="border-2 border-white/30 text-white px-12 py-5 rounded-full font-medium 
                        hover:border-white/50 hover:bg-white/5 transition-all duration-300"
             whileHover={{ scale: 1.05 }}

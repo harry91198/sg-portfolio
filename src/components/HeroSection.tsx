@@ -5,7 +5,6 @@ import { ChevronDown, ArrowRight } from 'lucide-react'
 
 export default function HeroSection() {
   const { scrollY } = useScroll()
-  const y = useTransform(scrollY, [0, 500], [0, -150])
   const opacity = useTransform(scrollY, [0, 300], [1, 0])
 
   const scrollToWork = () => {
@@ -74,6 +73,7 @@ export default function HeroSection() {
         >
           <motion.button
             onClick={scrollToWork}
+            style={{padding: '0.75rem'}}
             className="group bg-white text-black px-10 py-5 rounded-full font-medium 
                        hover:bg-white/90 transition-all duration-300 flex items-center gap-3"
             whileHover={{ scale: 1.05 }}
@@ -83,8 +83,22 @@ export default function HeroSection() {
             <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
           </motion.button>
           
+          <motion.a
+            href="/Resume.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
+            style={{padding: '0.75rem'}}
+            className="border-2 border-white/30 text-white px-10 py-5 rounded-full font-medium 
+                       hover:border-white/50 hover:bg-white/5 transition-all duration-300"
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
+          >
+            Resume
+          </motion.a>
+          
           <motion.button
             onClick={scrollToContact}
+            style={{padding: '0.75rem'}}
             className="border-2 border-white/30 text-white px-10 py-5 rounded-full font-medium 
                        hover:border-white/50 hover:bg-white/5 transition-all duration-300"
             whileHover={{ scale: 1.05 }}
