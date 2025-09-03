@@ -7,7 +7,14 @@ export default function HeroSection() {
   const { scrollY } = useScroll()
   const opacity = useTransform(scrollY, [0, 300], [1, 0])
 
-  const scrollToWork = () => {
+  const scrollToAbout = () => {
+    const element = document.getElementById('about')
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' })
+    }
+  }
+
+  const scrollToProjects = () => {
     const element = document.getElementById('work')
     if (element) {
       element.scrollIntoView({ behavior: 'smooth' })
@@ -24,7 +31,7 @@ export default function HeroSection() {
   return (
     <section id="hero" className="relative min-h-screen flex items-center justify-center">
       {/* Background */}
-      <div className="absolute inset-0 bg-black/90" />
+      <div className="absolute inset-0" />
 
       {/* Main Content */}
       <motion.div
@@ -72,29 +79,27 @@ export default function HeroSection() {
           transition={{ duration: 0.8, delay: 1.1 }}
         >
           <motion.button
-            onClick={scrollToWork}
+            onClick={scrollToAbout}
             style={{padding: '0.75rem'}}
             className="group bg-white text-black px-10 py-5 rounded-full font-medium 
                        hover:bg-white/90 transition-all duration-300 flex items-center gap-3"
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
           >
-            View Work
+            About
             <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
           </motion.button>
           
-          <motion.a
-            href="/Resume.pdf"
-            target="_blank"
-            rel="noopener noreferrer"
+          <motion.button
+            onClick={scrollToProjects}
             style={{padding: '0.75rem'}}
             className="border-2 border-white/30 text-white px-10 py-5 rounded-full font-medium 
                        hover:border-white/50 hover:bg-white/5 transition-all duration-300"
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
           >
-            Resume
-          </motion.a>
+            Projects
+          </motion.button>
           
           <motion.button
             onClick={scrollToContact}

@@ -13,8 +13,14 @@ const projects = [
     title: 'Ghani Sayani',
     category: 'Music Videos',
     description: 'Music video by MC Square featuring stunning visuals',
+    largeDescription: 'Step into a mesmerizing realm with our music video, an artful fusion of CGI and handcrafted 2D magic. The screen comes alive as digital and drawn worlds intertwine, creating a symphony of visual innovation. Each frame is a canvas where reality blurs and imagination reigns, seamlessly blending technology and artistic expression. As the music unfolds, so does our narrative, as characters seamlessly transition from pixel to penstroke. Vivid landscapes morph with the beat, taking you on a journey that transcends the ordinary. With an intricate dance of CGI and 2D artwork, we\'ve redefined storytelling, offering an audiovisual feast that ignites the senses and leaves an indelible mark on the heart.',
     link: 'https://www.youtube.com/watch?v=xg2TRUBs1kU',
     image: '/public/ghanisayani.jpg',
+    galleryImages: [
+      '/public/ghanisayani.jpg',
+      '/public/ghanisayani.jpg',
+      '/public/ghanisayani.jpg',
+    ],
     size: 'large',
   },
   {
@@ -22,8 +28,14 @@ const projects = [
     title: 'Gen Curse',
     category: 'Music Videos',
     description: 'Another music video featuring captivating visuals',
+    largeDescription: 'Worked as an Associate Producer on a music video that explored the theme of alcohol as a generational curse. Oversaw budgeting, location management, logistics, and operations, ensuring smooth execution of the project. The video featured gritty yet fluid visuals that powerfully portrayed the narrative, blending raw storytelling with cinematic depth.',
     link: 'https://www.youtube.com/watch?v=CBYGvvjtu2g',
     image: '/public/gencurse.jpg',
+    galleryImages: [
+      '/public/gencurse.jpg',
+      '/public/gencurse.jpg',
+      '/public/gencurse.jpg',
+    ],
     size: 'medium',
   },
   {
@@ -31,8 +43,14 @@ const projects = [
     title: 'Betaj Badshah',
     category: 'Music Videos',
     description: 'Betaaj Badshah music video showcasing a modern twist on a classic tale',
+    largeDescription: 'Worked as an Associate Producer and on a musical short film for the renowned artist Bagi Munda. The project blended cinematic storytelling with rich musicality, bringing the artist’s vision to life through striking visuals and immersive performances. I was responsible for managing budgeting, logistics, and location coordination, while also ensuring smooth day-to-day operations on set. From pre-production planning to on-ground execution, I oversaw the workflow between creative and technical teams, enabling the director and crew to focus on the artistic aspects. The final short film stands as a powerful showcase of Bagi Munda’s artistry, combining narrative depth with musical energy in a polished cinematic experience.',
     link: 'https://www.instagram.com/p/CsiCd02omxI/',
     image: '/public/betaajbadhshah.jpg',
+    galleryImages: [
+      '/public/betaajbadhshah.jpg',
+      '/public/betaajbadhshah.jpg',
+      '/public/betaajbadhshah.jpg',
+    ],
     size: 'large',
   },
   {
@@ -40,8 +58,14 @@ const projects = [
     title: 'Heer Ranjha',
     category: 'Music Videos',
     description: 'Heer Ranjha music video showcasing a VFX masterpiece',
+    largeDescription: 'Experience a music video like no other, a symphony of seamless transitions and fluid CGI mastery. Our visual masterpiece is a testament to artful innovation, where every scene flows effortlessly into the next, creating an immersive journey. The magic lies in the intricate CGI work that connects each moment, painting a vivid tapestry of imagination. As the rhythm carries you forward, the video\'s choreography mirrors the music\'s pulse, blurring the line between virtual and reality. Witness a captivating dance of technology and storytelling, where smoothness is the key. Brace yourself for a visual odyssey that melds sound and imagery into a harmonious spectacle, leaving you awestruck by the sheer artistry of the journey.',
     link: 'https://www.youtube.com/watch?v=QhNwq_z7eI4',
     image: '/public/heer.jpg',
+    galleryImages: [
+      '/public/heer.jpg',
+      '/public/heer.jpg',
+      '/public/heer.jpg',
+    ],
     size: 'medium',
   },
   {
@@ -49,8 +73,14 @@ const projects = [
     title: 'Qaatil', 
     category: 'Music Videos',
     description: 'Premium aesthetic with sophisticated cinematography',
+    largeDescription: 'Worked as an Associate Producer, Assistant Director, and Editor on the sad romantic music video Qaatil. As Associate Producer, I managed budgeting, logistics, and production operations, ensuring smooth execution from pre-production through post. In my role as Assistant Director, I coordinated with the director and crew on set, overseeing schedules, shot planning, and performance direction to keep the production aligned with the creative vision. Additionally, I took charge of the editing process, crafting the pacing, mood, and emotional flow of the video to enhance its storytelling impact. The final piece delivered a deeply emotional narrative, blending poignant performances with cinematic visuals that resonated strongly with the song’s heartfelt theme.',
     link: 'https://www.youtube.com/watch?v=PpR1TH3ZnOE',
     image: '/public/qaatil.jpeg',
+    galleryImages: [
+      '/public/qaatil.jpeg',
+      '/public/qaatil.jpeg',
+      '/public/qaatil.jpeg',
+    ],
     size: 'small',
   },
   {
@@ -58,8 +88,14 @@ const projects = [
     title: 'Let me drive',
     category: 'Music Videos',
     description: 'Visual storytelling with a focus on emotional impact',
+    largeDescription: 'Experience the pulse-pounding synergy of music and CGI in this dynamic hip-hop music video project. I designed and executed a high-octane VFX sequence that thrusts viewers into the heart of a neon-drenched metropolis, where two high-performance cars ignite the screen in an electrifying drag race..I also worked on the Concept and Idea working as a Creative Director to match the look and feel of the video and song. With precise modeling, texturing, and lighting, every glint of neon, engine roar, and burst of speed was brought to life, immersing the audience in the adrenaline-fueled atmosphere. Advanced compositing techniques seamlessly integrated CGI cars and environments with the live-action footage, while camera animations heightened the sense of velocity and cinematic impact. In addition to my creative role, I also contributed as an Associate Producer, managing operations, logistics, budgeting, and overall execution to ensure a seamless production workflow. This blend of artistic vision and production management resulted in an unforgettable audiovisual spectacle that amplifies the song’s raw energy and captures the essence of urban street racing.',
     link: 'https://www.youtube.com/watch?v=RKvGPTmAsk8',
     image: '/public/letmedrive.PNG',
+    galleryImages: [
+      '/public/letmedrive.PNG',
+      '/public/letmedrive.PNG',
+      '/public/letmedrive.PNG',
+    ],
     size: 'medium',
   },
   {
@@ -67,8 +103,14 @@ const projects = [
     title: 'Mulaqaat',
     category: 'Music Videos',
     description: 'The essence of connection and longing',
+    largeDescription: 'In this enchanting VFX project for a romantic music video, I meticulously crafted a CGI bus adorned with an abundance of flowers and natural elements, perfectly complementing the songs romantic theme. Through detailed modeling, texturing, and lighting, the bus came to life with a sense of charm and realism. I also directed the shoot of the main character, ensuring their emotions were captured authentically.I also worked on the Concept and Idea working as a Creative Director to match the look and feel of the video and song. Using advanced compositing techniques, I seamlessly merged the characters live-action footage with the CGI renders, while software-based camera animations were employed to heighten realism and cinematic appeal. Alongside my creative contributions, I also worked as an Associate Producer, overseeing management operations, logistics, budgeting, and execution to ensure smooth coordination between the creative and production teams. This dual role allowed me to balance artistic vision with operational efficiency, resulting in a visually captivating and emotionally immersive music video that transports viewers into a world of romance and beauty.',
     link: 'https://www.youtube.com/watch?v=roOsaq8EtrA',
     image: '/public/mulaqaat.jpg',
+    galleryImages: [
+      '/public/mulaqaat.jpg',
+      '/public/mulaqaat.jpg',
+      '/public/mulaqaat.jpg',
+    ],
     size: 'medium',
   },
   {
@@ -76,8 +118,14 @@ const projects = [
     title: 'Derma Bay',
     category: 'Ads',
     description: 'A captivating advertisement showcasing the beauty of Derma Bay',
+    largeDescription: 'Worked as the Creative Director from concept to completion on a campaign for the cosmetic brand Dermabay, shaping the overall visual identity and storytelling approach. I developed the creative direction to highlight the brand’s elegance and innovation, ensuring the aesthetics resonated with its target audience. In addition, I served as the VFX Supervisor, designing and executing CGI elements and shot compositions that elevated the product presentation. From pre-visualization and design to post-production refinement, I ensured the seamless integration of CGI with live-action, creating visually stunning sequences that emphasized the brand’s premium appeal. The final delivery combined artistry and technology, presenting Dermabay as a forward-thinking cosmetic brand with a refined visual narrative.',
     link: 'https://www.youtube.com/watch?v=0lgKxJBM56A',
     image: '/public/derma.jpg',
+    galleryImages: [
+      '/public/derma.jpg',
+      '/public/derma.jpg',
+      '/public/derma.jpg',
+    ],
     size: 'medium',
   },
   {
@@ -85,8 +133,14 @@ const projects = [
     title: 'Lot aa gaya',
     category: 'Music Videos',
     description: 'A music video featuring stunning visuals',
+    largeDescription: 'Immerse yourself in the vibrant world of Punjabi music through our groundbreaking music video. A fusion of CGI wizardry and dynamic 2D artwork, this visual masterpiece captures the essence of freestyle creativity. As the beats groove, our seamless compositing transports you through kaleidoscopic realms where reality blurs with imagination. From urban landscapes to dreamy wonderlands, each scene is a canvas of innovation. The synergy between CGI and 2D art forms an electrifying narrative that mirrors the songs soul. Get ready to be awestruck as visuals and rhythm synchronize, creating an unparalleled audiovisual extravaganza. Witness the magic where Punjabi culture meets cutting-edge technology, crafting a spellbinding story that unfolds with every frame.',
     link: 'https://www.youtube.com/watch?v=l1tnJmLv4qQ',
     image: '/public/lotaagaya.jpeg',
+    galleryImages: [
+      '/public/lotaagaya.jpeg',
+      '/public/lotaagaya.jpeg',
+      '/public/lotaagaya.jpeg',
+    ],
     size: 'medium',
   }
 ]

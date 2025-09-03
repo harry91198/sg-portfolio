@@ -2,13 +2,11 @@
 
 import { motion, useInView } from 'framer-motion'
 import { useRef } from 'react'
-import { Instagram, Linkedin, Twitter, Youtube, Mail, Download } from 'lucide-react'
+import { Instagram, Linkedin, Mail, Download } from 'lucide-react'
 
 const socialLinks = [
   { icon: Instagram, label: 'Instagram', href: '#' },
   { icon: Linkedin, label: 'LinkedIn', href: '#' },
-  { icon: Twitter, label: 'Twitter', href: '#' },
-  { icon: Youtube, label: 'YouTube', href: '#' },
 ]
 
 export default function ContactSection() {
@@ -25,11 +23,12 @@ export default function ContactSection() {
           transition={{ duration: 0.8 }}
           className="mb-32"
         >
-          <h2 className="text-3xl md:text-4xl font-bold mb-4" style={{margin:"1rem 0"}}>
-            Let&apos;s Work Together
+          <h2 className="text-3xl md:text-4xl font-bold mb-6" style={{margin:"1rem 0"}}>
+            Ready to bring your <span className="gradient-text">vision</span> to life?
           </h2>
-          <p className="text-white/60 text-sm mb-16 mt-8" style={{margin:"1rem 0"}}>
-            Ready to bring your vision to life? Get in touch.
+          <p className="text-white/60 text-base mb-16 mt-8 max-w-xl mx-auto leading-relaxed" style={{margin:"1rem 0"}}>
+            Let&apos;s collaborate on your next creative project. From initial concept 
+            to final delivery, I&apos;ll ensure your story is told with impact.
           </p>
         </motion.div>
 

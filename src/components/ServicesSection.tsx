@@ -2,43 +2,43 @@
 
 import { motion, useInView } from 'framer-motion'
 import { useRef } from 'react'
-import { Video, Megaphone, Palette, Clapperboard, Zap, Users } from 'lucide-react'
+import { Eye, Palette, Play, Users, Scissors, Zap } from 'lucide-react'
 
 const services = [
   {
-    icon: Video,
-    title: 'Music Video Direction',
-    description: 'Creative concept development, storyboarding, and full production management.',
+    icon: Eye,
+    title: 'VFX Supervision',
+    description: 'Overseeing visual effects workflows and ensuring seamless integration of CGI elements.',
     number: '01',
   },
   {
-    icon: Megaphone,
-    title: 'Commercial Production',
-    description: 'End-to-end commercial production that aligns brand messaging with visual storytelling.',
+    icon: Palette,
+    title: 'Creative Director',
+    description: 'Strategic creative leadership ensuring cohesive visual identity and storytelling impact.',
     number: '02',
   },
   {
-    icon: Palette,
-    title: 'Creative Direction',
-    description: 'Strategic creative leadership ensuring cohesive visual identity and impact.',
+    icon: Play,
+    title: 'Post Producer',
+    description: 'Managing post-production workflows from editing through final delivery.',
     number: '03',
   },
   {
-    icon: Clapperboard,
-    title: 'Film Production',
-    description: 'Complete film production pipeline from pre-production to final delivery.',
+    icon: Users,
+    title: 'Associate or Executive Producer',
+    description: 'End-to-end project management and coordination across all production phases.',
     number: '04',
   },
   {
-    icon: Zap,
-    title: 'VFX & Animation',
-    description: 'Advanced visual effects, CGI, and 3D animation that push creative boundaries.',
+    icon: Scissors,
+    title: 'Editor',
+    description: 'Crafting compelling narratives through precise editing and storytelling techniques.',
     number: '05',
   },
   {
-    icon: Users,
-    title: 'Team Management',
-    description: 'Expert project management and coordination for smooth workflow delivery.',
+    icon: Zap,
+    title: 'CGI and Animation',
+    description: 'Creating stunning computer-generated imagery and 3D animations that bring visions to life.',
     number: '06',
   },
 ]
@@ -120,34 +120,6 @@ export default function ServicesSection() {
           })}
         </div>
 
-        {/* CTA Section - Enhanced with proper spacing */}
-        <motion.div
-          initial={{ opacity: 0, y: 50 }}
-          animate={isInView ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.8, delay: 1.2 }}
-          className="flex justify-center"
-          style={{padding: '2rem'}}
-        >
-          <div style={{padding: '2rem'}} className="card max-w-3xl text-center">
-            <h3 className="text-2xl md:text-3xl font-bold mb-6 leading-tight" >
-              Ready to bring your <span className="gradient-text">vision</span> to life?
-            </h3>
-            <p className="text-white/60 mb-8 text-base max-w-xl mx-auto leading-relaxed">
-              Let&apos;s collaborate on your next creative project. From initial concept 
-              to final delivery, I&apos;ll ensure your story is told with impact.
-            </p>
-            <motion.button
-              onClick={scrollToContact}
-              style={{padding: '0.75rem'}}
-              className="bg-white text-black px-8 py-3 rounded-full font-medium text-sm
-                         hover:bg-white/90 transition-all duration-300"
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-            >
-              Start a Project
-            </motion.button>
-          </div>
-        </motion.div>
       </div>
     </section>
   )
