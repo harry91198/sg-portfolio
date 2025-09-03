@@ -55,7 +55,7 @@ export default function ServicesSection() {
   }
 
   return (
-    <section id="services" ref={ref} className="min-h-screen py-32 px-6">
+    <section id="services" ref={ref} className="min-h-screen flex items-center justify-center py-32 px-6">
       <div className="max-w-6xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 50 }}
@@ -72,7 +72,7 @@ export default function ServicesSection() {
             transition={{ duration: 0.8, delay: 0.3 }}
             className="accent-line rounded-full mx-auto mb-6"
           />
-          <p className="text-base text-white/60 max-w-2xl mx-auto text-center">
+          <p className="text-base text-white/60 max-w-2xl mx-auto text-center" style={{padding: '1rem'}}>
             Comprehensive creative services that bring your vision to life
           </p>
         </motion.div>
@@ -126,9 +126,10 @@ export default function ServicesSection() {
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.8, delay: 1.2 }}
           className="flex justify-center"
+          style={{padding: '2rem'}}
         >
           <div style={{padding: '2rem'}} className="card max-w-3xl text-center">
-            <h3 className="text-2xl md:text-3xl font-bold mb-6 leading-tight">
+            <h3 className="text-2xl md:text-3xl font-bold mb-6 leading-tight" >
               Ready to bring your <span className="gradient-text">vision</span> to life?
             </h3>
             <p className="text-white/60 mb-8 text-base max-w-xl mx-auto leading-relaxed">

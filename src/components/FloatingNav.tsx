@@ -52,13 +52,13 @@ export default function FloatingNav() {
         initial={{ scale: 0.8, opacity: 0 }}
         animate={{ scale: 1, opacity: 1 }}
         transition={{ duration: 0.6, ease: "easeOut" }}
-        className="bg-black/80 border-2 border-white/10 rounded-full px-10 py-5 backdrop-blur-sm"
+        className="bg-black/80 border-2 border-white/10 rounded-full px-16 py-6 backdrop-blur-sm"
       >
-        <div className="flex items-center space-x-8">
+        <div className="flex items-center space-x-12">
           {navItems.map((item, index) => {
             const Icon = item.icon
             const isActive = activeSection === item.id
-            
+
             return (
               <motion.button
                 key={item.id}
@@ -69,14 +69,16 @@ export default function FloatingNav() {
                 initial={{ opacity: 0, y: -20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: index * 0.1 }}
+                style={{
+                  padding: '0.5rem 1.5rem',
+                }}
               >
-                <Icon 
-                  size={18} 
-                  className={`transition-colors duration-300 ${
-                    isActive ? 'text-white' : 'text-white/40 group-hover:text-white/70'
-                  }`}
+                <Icon
+                  size={24}
+                  className={`transition-colors duration-300 ${isActive ? 'text-white' : 'text-white/40 group-hover:text-white/70'
+                    }`}
                 />
-                
+
                 {isActive && (
                   <motion.div
                     layoutId="activeIndicator"

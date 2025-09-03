@@ -4,8 +4,8 @@ import { motion, useInView } from 'framer-motion'
 import { useRef, useState } from 'react'
 import { ArrowRight, ExternalLink } from 'lucide-react'
 import Image from 'next/image'
+import ProjectModal from './ProjectModal'
 
-const categories = ['All', 'Music Videos', 'Ads', 'Digital Campaigns']
 
 const projects = [
   {
@@ -92,17 +92,26 @@ const projects = [
 ]
 
 export default function WorkSection() {
-  const [selectedCategory, setSelectedCategory] = useState('All')
   const [hoveredProject, setHoveredProject] = useState<number | null>(null)
+  const [selectedProject, setSelectedProject] = useState<typeof projects[0] | null>(null)
+  const [isModalOpen, setIsModalOpen] = useState(false)
   const ref = useRef(null)
   const isInView = useInView(ref, { once: true, margin: "-100px" })
 
-  const filteredProjects = selectedCategory === 'All' 
-    ? projects 
-    : projects.filter(project => project.category === selectedCategory)
+  const filteredProjects = projects
+
+  const openModal = (project: typeof projects[0]) => {
+    setSelectedProject(project)
+    setIsModalOpen(true)
+  }
+
+  const closeModal = () => {
+    setIsModalOpen(false)
+    setSelectedProject(null)
+  }
 
   return (
-    <section id="work" ref={ref} className="min-h-screen py-32 px-6">
+    <section id="work" ref={ref} className="min-h-screen flex items-center justify-center py-32 px-6">
       <div className="max-w-7xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 50 }}
@@ -119,7 +128,7 @@ export default function WorkSection() {
             transition={{ duration: 0.8, delay: 0.3 }}
             className="accent-line rounded-full mx-auto mb-8"
           />
-          <p className="text-xl text-white/60 max-w-3xl mx-auto text-center leading-relaxed">
+          <p className="text-xl text-white/60 max-w-3xl mx-auto text-center leading-relaxed" style={{padding: '1rem'}}>
             A curated collection of impactful visual storytelling projects
           </p>
         </motion.div>
@@ -131,7 +140,7 @@ export default function WorkSection() {
           transition={{ duration: 0.6, delay: 0.5 }}
           className="flex justify-center mb-20"
         >
-          <div className="flex flex-wrap justify-center gap-3 bg-black/40 border-2 border-white/10 rounded-full p-4">
+          {/* <div className="flex flex-wrap justify-center gap-3 bg-black/40 border-2 border-white/10 rounded-full p-4">
             {categories.map((category) => (
               <motion.button
                 key={category}
@@ -147,17 +156,14 @@ export default function WorkSection() {
                 {category}
               </motion.button>
             ))}
-          </div>
+          </div> */}
         </motion.div>
 
         {/* Projects Uniform Grid */}
         <motion.div layout className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
           {filteredProjects.map((project, index) => (
-            <motion.a
+            <motion.div
               key={project.id}
-              href={project.link}
-              target="_blank"
-              rel="noopener noreferrer"
               layout
               initial={{ opacity: 0, y: 50 }}
               animate={isInView ? { opacity: 1, y: 0 } : {}}
@@ -165,6 +171,7 @@ export default function WorkSection() {
               whileHover={{ y: -8 }}
               onHoverStart={() => setHoveredProject(project.id)}
               onHoverEnd={() => setHoveredProject(null)}
+              onClick={() => openModal(project)}
               className="group cursor-pointer block"
             >
               <div className="card overflow-hidden h-full flex flex-col">
@@ -227,12 +234,12 @@ export default function WorkSection() {
                   </motion.div>
                 </div>
               </div>
-            </motion.a>
+            </motion.div>
           ))}
         </motion.div>
 
         {/* View More */}
-        <motion.div
+        {/* <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6, delay: 1.2 }}
@@ -247,7 +254,14 @@ export default function WorkSection() {
           >
             View All Projects
           </motion.button>
-        </motion.div>
+        </motion.div> */}
+
+        {/* Project Modal */}
+        <ProjectModal
+          project={selectedProject}
+          isOpen={isModalOpen}
+          onClose={closeModal}
+        />
       </div>
     </section>
   )

@@ -22,9 +22,9 @@ export default function HeroSection() {
   }
 
   return (
-    <section id="hero" className="relative min-h-screen flex items-center justify-center overflow-hidden">
-      {/* Simple Background */}
-      <div className="absolute inset-0 bg-black" />
+    <section id="hero" className="relative min-h-screen flex items-center justify-center">
+      {/* Background */}
+      <div className="absolute inset-0 bg-black/90" />
 
       {/* Main Content */}
       <motion.div

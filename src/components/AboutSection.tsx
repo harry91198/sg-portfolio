@@ -8,7 +8,7 @@ export default function AboutSection() {
   const isInView = useInView(ref, { once: true, margin: "-100px" })
 
   return (
-    <section id="about" ref={ref} className="min-h-screen py-32 px-6">
+    <section id="about" ref={ref} className="min-h-screen flex items-center justify-center py-32 px-6">
       <div className="max-w-6xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 50 }}

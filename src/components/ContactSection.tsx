@@ -23,12 +23,12 @@ export default function ContactSection() {
           initial={{ opacity: 0, y: 30 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.8 }}
-          className="mb-12"
+          className="mb-32"
         >
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">
+          <h2 className="text-3xl md:text-4xl font-bold mb-4" style={{margin:"1rem 0"}}>
             Let&apos;s Work Together
           </h2>
-          <p className="text-white/60 text-sm mb-8">
+          <p className="text-white/60 text-sm mb-16 mt-8" style={{margin:"1rem 0"}}>
             Ready to bring your vision to life? Get in touch.
           </p>
         </motion.div>
@@ -38,7 +38,8 @@ export default function ContactSection() {
           initial={{ opacity: 0, y: 20 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6, delay: 0.3 }}
-          className="mb-12"
+          className="mb-32"
+          style={{margin:"1rem 0"}}
         >
           <motion.a
             href="mailto:sarthak.grover24@gmail.com"
@@ -58,7 +59,8 @@ export default function ContactSection() {
           initial={{ opacity: 0, y: 20 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6, delay: 0.5 }}
-          className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-12"
+          className="flex flex-col sm:flex-row items-center justify-center gap-8 mb-32"
+          style={{margin:"1rem 0"}}
         >
           <motion.a
             href="/Resume.pdf"
@@ -84,9 +86,10 @@ export default function ContactSection() {
           initial={{ opacity: 0, y: 20 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6, delay: 0.7 }}
-          className="mb-16"
+          className="mb-24"
+          style={{margin:"1rem 0"}}
         >
-          <div className="flex items-center justify-center gap-6">
+          <div className="flex items-center justify-center gap-10">
             {socialLinks.map((social, index) => {
               const Icon = social.icon
               return (
@@ -114,7 +117,7 @@ export default function ContactSection() {
           initial={{ opacity: 0 }}
           animate={isInView ? { opacity: 1 } : {}}
           transition={{ duration: 0.6, delay: 1.0 }}
-          className="pt-8 border-t border-white/10"
+          className="pt-12 border-t border-white/10"
         >
           <p className="text-white/30 text-xs">
             © 2025 Sarthak Grover • Chandigarh, India
