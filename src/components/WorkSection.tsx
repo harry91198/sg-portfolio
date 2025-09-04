@@ -278,7 +278,7 @@ export default function WorkSection() {
                 <div className="relative aspect-[4/5] overflow-hidden">
                   {/* Project Image */}
                   <Image
-                    src={project.image.replace('/public', '')}
+                    src={project.image.replace('/public/', '/')}
                     alt={project.title}
                     fill
                     className="object-cover transition-transform duration-700 group-hover:scale-110"
@@ -288,10 +288,10 @@ export default function WorkSection() {
                   <div className="absolute inset-0 bg-black/20 group-hover:bg-black/40 transition-colors duration-300" />
                   
                   {/* Category Badge */}
-                  <div className="absolute top-4 left-4 bg-black/80 text-white px-3 py-1.5 
+                  {/* <div className="absolute top-4 left-4 bg-black/80 text-white px-3 py-1.5 
                                 rounded-full text-xs font-medium backdrop-blur-sm">
                     {project.category}
-                  </div>
+                  </div> */}
                   
                   {/* Play Button */}
                   <motion.div
