@@ -156,8 +156,8 @@ const projects = [
     link: 'https://www.youtube.com/watch?v=0lgKxJBM56A',
     image: '/public/derma.jpg',
     galleryImages: [
-      '/public/derma1.jpg',
       '/public/derma2.jpg',
+      '/public/derma1.jpg',
       '/public/derma3.jpg',
       '/public/derma4.jpg',
       '/public/derma5.jpg',
@@ -187,7 +187,38 @@ const projects = [
       '/public/lotaagaya9.jpeg'
     ],
     size: 'medium',
+  },
+  {
+    id: 10,
+    title: 'Sharmana',
+    category: 'Music Videos',
+    description: 'A musical short film with stunning visuals',
+    largeDescription: 'Dive into a mesmerizing audiovisual realm with this VFX-driven music video, where cutting-edge CGI and intricate compositing converge to craft a stunning visual journey that transcends reality. From futuristic cityscapes to enchanted forests, each CGI set stands as a testament to artistry and imagination. Through meticulous compositing, disparate elements were woven into a seamless tapestry of wonder, as the rhythm of the music took visual form in vivid landscapes that morph and meld, reflecting the soul of the song. The result is a symphony of light and pixels that dances in harmony, showcasing the boundless possibilities of VFX storytelling.',
+    link: 'https://www.youtube.com/watch?v=cau-Y-BFwjE',
+    image: '/public/sharmana.jpg',
+    galleryImages: [
+      '/public/sharmana1.jpg',
+      '/public/sharmana2.jpg',
+      '/public/sharmana3.jpg',
+      '/public/sharmana4.jpg',
+      '/public/sharmana5.jpg'
+    ],
+    size: 'medium',
+  },
+  {
+    id: 11,
+    title: 'Astro Dancers',
+    category: 'Music Videos',
+    description: 'A music video featuring stunning visuals',
+    largeDescription: 'Worked as a CGI and VFX Artist on a freestyle cover video, experimenting with creative ideas to enhance the raw, unfiltered aesthetic of the project. I designed and developed unique CGI elements that complemented the music’s energy and style, integrating them seamlessly into the live-action footage through advanced compositing techniques. This experimental approach allowed for a bold visual language, merging spontaneity with polished digital artistry, resulting in a video that felt both authentic and visually dynamic.',
+    link: 'https://www.youtube.com/watch?v=44Iw2-kNXc0',
+    image: '/public/astrodancers.png',
+    galleryImages: [
+      '/public/astrodancers1.mp4'
+    ],
+    size: 'large',
   }
+
 ]
 
 export default function WorkSection() {
