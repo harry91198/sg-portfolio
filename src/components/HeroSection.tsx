@@ -63,13 +63,23 @@ export default function HeroSection() {
         </motion.h1>
 
         <motion.p
-          className="text-lg md:text-xl text-white/60 mb-16 max-w-3xl mx-auto font-light leading-relaxed text-center justify-center"
+          className="
+          text-lg 
+          md:text-xl 
+          text-white/60 
+          mb-16 
+          mx-auto 
+          font-light 
+          leading-relaxed 
+          text-center 
+          justify-center
+          "
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.9 }}
         >
-          Leading projects across the entire filmmaking pipeline — from concept 
-          to delivery. Creating impactful visual storytelling.
+          Leading projects across the entire filmmaking pipeline — 
+          <br />from concept to delivery. Creating impactful visual storytelling.
         </motion.p>
 
         <motion.div

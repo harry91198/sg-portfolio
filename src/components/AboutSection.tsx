@@ -39,14 +39,7 @@ export default function AboutSection() {
             <div className="absolute -top-8 -left-8 w-32 h-32 bg-gradient-to-br from-white/5 to-transparent rounded-full blur-3xl" />
             
             <div className="relative z-10">
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                animate={isInView ? { opacity: 1, y: 0 } : {}}
-                transition={{ duration: 0.6, delay: 0.6 }}
-                className="inline-block bg-white/10 backdrop-blur-sm border border-white/20 rounded-full px-6 py-2 mb-8"
-              >
-                <span className="text-sm font-medium text-white/80">Creative Professional</span>
-              </motion.div>
+              
               
               <div className="space-y-8 text-base text-white/80 leading-relaxed">
                 <motion.p

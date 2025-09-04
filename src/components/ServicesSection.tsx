@@ -72,7 +72,7 @@ export default function ServicesSection() {
             transition={{ duration: 0.8, delay: 0.3 }}
             className="accent-line rounded-full mx-auto mb-6"
           />
-          <p className="text-base text-white/60 max-w-2xl mx-auto text-center" style={{padding: '1rem'}}>
+          <p className="text-base text-white/60 mx-auto text-center" style={{padding: '1rem'}}>
             Comprehensive creative services that bring your vision to life
           </p>
         </motion.div>

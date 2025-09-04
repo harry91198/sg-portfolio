@@ -227,7 +227,7 @@ export default function WorkSection() {
             transition={{ duration: 0.8, delay: 0.3 }}
             className="accent-line rounded-full mx-auto mb-8"
           />
-          <p className="text-xl text-white/60 max-w-3xl mx-auto text-center leading-relaxed" style={{padding: '1rem'}}>
+          <p className="text-xl text-white/60  mx-auto text-center leading-relaxed" style={{padding: '1rem'}}>
             A curated collection of impactful visual storytelling projects
           </p>
         </motion.div>
