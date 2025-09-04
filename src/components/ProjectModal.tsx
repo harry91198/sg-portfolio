@@ -91,7 +91,7 @@ export default function ProjectModal({ project, isOpen, onClose }: ProjectModalP
                 {isVideo(images[currentImageIndex]) ? (
                   <video
                     src={images[currentImageIndex].replace('/public', '')}
-                    className="w-full h-full object-cover"
+                    className="w-full h-full object-contain"
                     controls
                     autoPlay
                     muted
@@ -102,7 +102,7 @@ export default function ProjectModal({ project, isOpen, onClose }: ProjectModalP
                     src={images[currentImageIndex].replace('/public', '')}
                     alt={`${project.title} - Image ${currentImageIndex + 1}`}
                     fill
-                    className="object-cover"
+                    className="object-contain"
                   />
                 )}
                 
