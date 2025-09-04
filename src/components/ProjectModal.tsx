@@ -29,6 +29,10 @@ export default function ProjectModal({ project, isOpen, onClose }: ProjectModalP
   if (!project) return null
 
   const images = project.galleryImages
+  
+  const isVideo = (src: string) => {
+    return src.toLowerCase().endsWith('.mp4') || src.toLowerCase().endsWith('.webm') || src.toLowerCase().endsWith('.mov')
+  }
 
   const nextImage = () => {
     setCurrentImageIndex((prev) => (prev + 1) % images.length)
@@ -74,9 +78,9 @@ export default function ProjectModal({ project, isOpen, onClose }: ProjectModalP
               <X className="w-5 h-5 text-white" />
             </motion.button>
 
-            {/* Image Carousel */}
+            {/* Media Carousel */}
             <div className="relative aspect-video overflow-hidden bg-black/50">
-              {/* Image with enhanced loading effect */}
+              {/* Media with enhanced loading effect */}
               <motion.div
                 key={currentImageIndex}
                 initial={{ opacity: 0, scale: 1.1 }}
@@ -84,12 +88,23 @@ export default function ProjectModal({ project, isOpen, onClose }: ProjectModalP
                 transition={{ duration: 0.5 }}
                 className="relative w-full h-full"
               >
-                <Image
-                  src={images[currentImageIndex].replace('/public', '')}
-                  alt={`${project.title} - Image ${currentImageIndex + 1}`}
-                  fill
-                  className="object-cover"
-                />
+                {isVideo(images[currentImageIndex]) ? (
+                  <video
+                    src={images[currentImageIndex].replace('/public', '')}
+                    className="w-full h-full object-cover"
+                    controls
+                    autoPlay
+                    muted
+                    loop
+                  />
+                ) : (
+                  <Image
+                    src={images[currentImageIndex].replace('/public', '')}
+                    alt={`${project.title} - Image ${currentImageIndex + 1}`}
+                    fill
+                    className="object-cover"
+                  />
+                )}
                 
                 {/* Gradient overlay */}
                 <div className="absolute inset-0 bg-gradient-to-t from-black/30 via-transparent to-transparent" />
@@ -150,10 +165,10 @@ export default function ProjectModal({ project, isOpen, onClose }: ProjectModalP
                 </motion.div>
               )}
               
-              {/* Image counter */}
-              <div className="absolute top-6 left-6 bg-black/80 backdrop-blur-sm border border-white/20 rounded-full px-4 py-2">
+              {/* Media counter */}
+              <div className="absolute top-6 left-6 bg-black/80 backdrop-blur-sm border border-white/20 rounded-full px-4 py-2" style={{padding: '0.2rem'}}>
                 <span className="text-white/90 text-sm font-medium">
-                  {currentImageIndex + 1} / {images.length}
+                  {currentImageIndex + 1} / {images.length} {isVideo(images[currentImageIndex]) ? '📹' : '🖼️'}
                 </span>
               </div>
             </div>
@@ -179,7 +194,7 @@ export default function ProjectModal({ project, isOpen, onClose }: ProjectModalP
                       className="bg-gradient-to-r from-white/20 to-white/10 backdrop-blur-sm border border-white/30 rounded-full px-5 py-2"
                     >
                       <span className="text-sm font-semibold text-white tracking-wide uppercase">
-                        {project.category}
+
                       </span>
                     </motion.div>
                   </div>
@@ -188,7 +203,8 @@ export default function ProjectModal({ project, isOpen, onClose }: ProjectModalP
                     initial={{ opacity: 0, x: -30 }}
                     animate={{ opacity: 1, x: 0 }}
                     transition={{ delay: 0.4 }}
-                    className="text-4xl md:text-5xl font-black text-white mb-4 tracking-tight"
+                    className="text-4xl md:text-5xl font-black text-white mb-8 tracking-tight"
+                    style={{ padding: '1rem' }}
                   >
                     {project.title}
                   </motion.h3>
@@ -209,8 +225,8 @@ export default function ProjectModal({ project, isOpen, onClose }: ProjectModalP
                   transition={{ delay: 0.5 }}
                   className="mb-10"
                 >
-                  <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-8">
-                    <p className="text-white/80 text-base leading-loose tracking-wide">
+                  <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-10">
+                    <p className="text-white/80 text-base leading-loose tracking-wide" style={{ padding: '1rem' }}>
                       {project.largeDescription}
                     </p>
                   </div>
@@ -233,7 +249,13 @@ export default function ProjectModal({ project, isOpen, onClose }: ProjectModalP
                     whileHover={{ scale: 1.05, y: -2 }}
                     whileTap={{ scale: 0.95 }}
                   >
-                    <ExternalLink className="w-5 h-5" />
+                    {project.link.includes('youtube.com') || project.link.includes('youtu.be') ? (
+                      <svg className="w-5 h-5" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
+                      </svg>
+                    ) : (
+                      <ExternalLink className="w-5 h-5" />
+                    )}
                     <span>View Project</span>
                     <motion.div
                       animate={{ x: [0, 4, 0] }}
