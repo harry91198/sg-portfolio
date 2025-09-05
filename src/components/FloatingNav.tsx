@@ -46,15 +46,16 @@ export default function FloatingNav() {
   return (
     <motion.nav
       style={{ y, opacity }}
-      className="fixed top-8 left-1/2 transform -translate-x-1/2 z-50"
+      className="fixed top-4 sm:top-8 left-1/2 transform -translate-x-1/2 z-50"
     >
       <motion.div
         initial={{ scale: 0.8, opacity: 0 }}
         animate={{ scale: 1, opacity: 1 }}
         transition={{ duration: 0.6, ease: "easeOut" }}
-        className="bg-black/80 border-2 border-white/10 rounded-full px-16 py-6 backdrop-blur-sm"
+        className="bg-black/80 border-2 border-white/10 rounded-full px-4 sm:px-8 md:px-12 lg:px-16 py-3 sm:py-4 md:py-6 backdrop-blur-sm"
+        style={{padding: '0.2rem'}}
       >
-        <div className="flex items-center space-x-12">
+        <div className="flex items-center space-x-3 sm:space-x-6 md:space-x-8 lg:space-x-12">
           {navItems.map((item, index) => {
             const Icon = item.icon
             const isActive = activeSection === item.id
@@ -63,20 +64,17 @@ export default function FloatingNav() {
               <motion.button
                 key={item.id}
                 onClick={() => scrollToSection(item.id)}
-                className="relative group"
+                className="relative group px-2 py-1 sm:px-4 md:px-6 sm:py-2 md:py-3"
                 whileHover={{ scale: 1.1 }}
                 whileTap={{ scale: 0.95 }}
                 initial={{ opacity: 0, y: -20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: index * 0.1 }}
-                style={{
-                  padding: '0.5rem 1.5rem',
-                }}
+                style={{padding: '1rem'}}
               >
                 <Icon
-                  size={24}
-                  className={`transition-colors duration-300 ${isActive ? 'text-white' : 'text-white/40 group-hover:text-white/70'
-                    }`}
+                  size={16}
+                  className={`sm:w-5 sm:h-5 md:w-6 md:h-6 transition-colors duration-300 ${isActive ? 'text-white' : 'text-white/40 group-hover:text-white/70'}`}
                 />
 
                 {isActive && (

@@ -241,24 +241,24 @@ export default function WorkSection() {
   }
 
   return (
-    <section id="work" ref={ref} className="min-h-screen flex items-center justify-center py-32 px-6">
+    <section id="work" ref={ref} className="min-h-screen flex items-center justify-center py-16 sm:py-24 md:py-32 px-4 sm:px-6">
       <div className="max-w-7xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 50 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.8 }}
-          className="text-center mb-24"
+          className="text-center mb-12 sm:mb-16 md:mb-24"
         >
-          <h2 className="text-6xl md:text-8xl font-black tracking-tighter gradient-text mb-8">
+          <h2 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-black tracking-tighter gradient-text mb-6 sm:mb-8">
             SELECTED WORK
           </h2>
           <motion.div
             initial={{ width: 0 }}
-            animate={isInView ? { width: '120px' } : {}}
+            animate={isInView ? { width: '80px' } : {}}
             transition={{ duration: 0.8, delay: 0.3 }}
-            className="accent-line rounded-full mx-auto mb-8"
+            className="accent-line rounded-full mx-auto mb-6 sm:mb-8 sm:w-[120px]"
           />
-          <p className="text-xl text-white/60  mx-auto text-center leading-relaxed" style={{padding: '1rem'}}>
+          <p className="text-base sm:text-lg md:text-xl text-white/60 mx-auto text-center leading-relaxed px-4 sm:px-8 max-w-4xl" style={{padding: '1rem', marginLeft: 'auto', marginRight: 'auto'}}>
             A curated collection of impactful visual storytelling projects
           </p>
         </motion.div>
@@ -268,7 +268,7 @@ export default function WorkSection() {
           initial={{ opacity: 0, y: 30 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6, delay: 0.5 }}
-          className="flex justify-center mb-20"
+          className="flex justify-center mb-12 sm:mb-16 md:mb-20"
         >
           {/* <div className="flex flex-wrap justify-center gap-3 bg-black/40 border-2 border-white/10 rounded-full p-4">
             {categories.map((category) => (
@@ -290,7 +290,7 @@ export default function WorkSection() {
         </motion.div>
 
         {/* Projects Uniform Grid */}
-        <motion.div layout className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+        <motion.div layout className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 md:gap-8">
           {filteredProjects.map((project, index) => (
             <motion.div
               key={project.id}
@@ -304,7 +304,7 @@ export default function WorkSection() {
               onClick={() => openModal(project)}
               className="group cursor-pointer block"
             >
-              <div className="card overflow-hidden h-full flex flex-col">
+              <div className="card overflow-hidden h-full flex flex-col" style={{padding: '1rem'}}>
                 {/* Project Thumbnail - Fixed Aspect Ratio */}
                 <div className="relative aspect-[4/5] overflow-hidden">
                   {/* Project Image */}
@@ -319,7 +319,7 @@ export default function WorkSection() {
                   <div className="absolute inset-0 bg-black/20 group-hover:bg-black/40 transition-colors duration-300" />
                   
                   {/* Category Badge */}
-                  {/* <div className="absolute top-4 left-4 bg-black/80 text-white px-3 py-1.5 
+                  {/* <div className="absolute top-2 left-2 sm:top-4 sm:left-4 bg-black/80 text-white px-2 py-1 sm:px-3 sm:py-1.5 
                                 rounded-full text-xs font-medium backdrop-blur-sm">
                     {project.category}
                   </div> */}
@@ -336,32 +336,32 @@ export default function WorkSection() {
                     <motion.div
                       whileHover={{ scale: 1.1 }}
                       whileTap={{ scale: 0.9 }}
-                      className="w-16 h-16 bg-white/20 backdrop-blur-md rounded-full 
+                      className="w-12 h-12 sm:w-16 sm:h-16 bg-white/20 backdrop-blur-md rounded-full 
                                 flex items-center justify-center border border-white/30"
                     >
-                      <ExternalLink className="w-6 h-6 text-white" />
+                      <ExternalLink className="w-4 h-4 sm:w-6 sm:h-6 text-white" />
                     </motion.div>
                   </motion.div>
                 </div>
 
                 {/* Project Info */}
-                <div style={{padding: '2rem'}} className="flex-1 flex flex-col">
-                  <h3 className="text-xl font-bold mb-4 group-hover:text-white transition-colors text-center">
+                <div className="p-4 sm:p-6 md:p-8 flex-1 flex flex-col" style={{padding: '1rem'}}>
+                  <h3 className="text-lg sm:text-xl font-bold mb-3 sm:mb-4 group-hover:text-white transition-colors text-center">
                     {project.title}
                   </h3>
-                  <p className="text-white/60 mb-8 text-sm leading-relaxed flex-1 text-center">
+                  <p className="text-white/60 mb-4 sm:mb-6 md:mb-8 text-xs sm:text-sm leading-relaxed flex-1 text-center">
                     {project.description}
                   </p>
                   
-                  <motion.div
+                  {/* <motion.div
                     className="flex items-center justify-center mt-auto"
                     whileHover={{ x: 2 }}
                   >
-                    <span className="text-white/80 font-medium text-sm mr-2">
+                    <span className="text-white/80 font-medium text-xs sm:text-sm mr-2">
                       View Project
                     </span>
-                    <ArrowRight className="w-4 h-4 text-white/60 group-hover:translate-x-1 transition-transform" />
-                  </motion.div>
+                    <ArrowRight className="w-3 h-3 sm:w-4 sm:h-4 text-white/60 group-hover:translate-x-1 transition-transform" />
+                  </motion.div> */}
                 </div>
               </div>
             </motion.div>
